@@ -32,13 +32,19 @@ const generateLetterButtons = () => {
     $('#letter-buttons').append(`<button> ${letter} </button>`);
   }
 };
+
+
 // Set the `disabled` property of `buttonEl` to `true.
 //
 // `buttonEl` is an `HTMLElement` object.
 //
 const disableLetterButton = (buttonEl) => {
   // Replace this with your code
+  const button = $(buttonEl);
+  button.attr('disabled', true);
 };
+
+
 
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
@@ -46,6 +52,7 @@ const disableLetterButton = (buttonEl) => {
 
 const isLetterInWord = (letter) => {
   // Replace this with your code
+  return $(`div.${letter}`).length > 0
 };
 
 
